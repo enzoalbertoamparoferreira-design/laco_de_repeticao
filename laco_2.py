@@ -1,20 +1,19 @@
-import os
+import os 
+
 os.system("cls")
-import time
 
-# Solicita ao usuário um número
-numero_str = input("Digite um número para a contagem regressiva: ")
+login_correto = "admin"
+senha_correta = "12345"
 
-# Verifica se a entrada é um número válido e converte para inteiro
-try:
-    numero = int(numero_str)
+while True:
+  
+    login = input("Digite seu login: ")
+    senha = input("Digite sua senha: ")
     
-    # Faz a contagem regressiva a partir do número informado até 1
-    for i in range(numero, 0, -1):
-        print(i)
-        time.sleep(1)  # Aguarda 1 segundo antes de continuar
+    
+    if login == login_correto and senha == senha_correta:
+        print("Acesso concedido! Bem-vindo(a).")
+        break 
+    else:
         
-    print("Contagem finalizada!")
-
-except ValueError:
-    print("Por favor, digite um número inteiro válido.")
+        print("Login ou senha incorretos. Por favor, tente novamente.\n")
